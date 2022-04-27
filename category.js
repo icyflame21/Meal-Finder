@@ -42,7 +42,7 @@ async function storeData(data) {
 
 async function fetchData() {
   let category = document.querySelector('#category').value;
-  // console.log(category);
+  console.log(category);
   let data;
   if (category == `Beef`) {
     data = localStorage.getItem('Beef');

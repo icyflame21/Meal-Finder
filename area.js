@@ -5,9 +5,10 @@ const mealsEl = document.getElementById('meals'),
 
 async function updateSelect() {
   let select = document.querySelector('#area');
-  let url = `www.themealdb.com/api/json/v1/1/list.php?a=list`;
+  let url =`https://www.themealdb.com/api/json/v1/1/list.php?a=list`;
   let data = await (await fetch(url)).json();
-  let categories = data.categories;
+  console.log(data.meals)
+  const categories=data.meals
   let option = document.createElement('option');
   option.setAttribute('value', ``);
   option.innerHTML = 'Select By Area';
@@ -28,7 +29,7 @@ updateSelect();
 async function storeData(data) {
   for (var i = 0; i < data.length; i++) {
     const element = data[i];
-    let url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${element.strCategory}`;
+    let url = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${element.strArea}`;
     let Mealsvalue;
     try {
       meals = await (await fetch(url)).json();
@@ -36,47 +37,53 @@ async function storeData(data) {
       console.log(error);
     }
     Mealsvalue = meals.meals;
-    localStorage.setItem(`${element.strCategory}`, JSON.stringify(Mealsvalue));
+    localStorage.setItem(`${element.strArea}`, JSON.stringify(Mealsvalue));
   }
 }
 
 async function fetchData() {
-  let category = document.querySelector('#category').value;
-  // console.log(category);
+  let area = document.querySelector('#area').value;
+  console.log(area);
   let data;
-  if (category == `Beef`) {
-    data = localStorage.getItem('Beef');
-  } else if (category == `Chicken`) {
-    data = localStorage.getItem('Chicken');
-  } else if (category == `Dessert`) {
-    data = localStorage.getItem('Dessert');
-  } else if (category == `Lamb`) {
-    data = localStorage.getItem('Lamb');
-  } else if (category == `Miscellaneous`) {
-    data = localStorage.getItem('Miscellaneous');
-  } else if (category == `Pasta`) {
-    data = localStorage.getItem('Pasta');
-  } else if (category == `Pork`) {
-    data = localStorage.getItem('Pork');
-  } else if (category == `Seafood`) {
-    data = localStorage.getItem('Seafood');
-  } else if (category == `Side`) {
-    data = localStorage.getItem('Side');
-  } else if (category == `Starter`) {
-    data = localStorage.getItem('Starter');
-  } else if (category == `Vegan`) {
-    data = localStorage.getItem('Vegan');
-  } else if (category == `Vegetarian`) {
-    data = localStorage.getItem('Vegetarian');
-  } else if (category == `Breakfast`) {
-    data = localStorage.getItem('Breakfast');
-  } else if (category == `Goat`) {
-    data = localStorage.getItem('Goat');
+  if (area == `American`) {
+    data = localStorage.getItem('American');
+  } else if (area == `British`) {
+    data = localStorage.getItem('British');
+  } else if (area == `Canadian`) {
+    data = localStorage.getItem('Canadian');
+  } else if (area == `Chinese`) {
+    data = localStorage.getItem('Chinese');
+  } else if (area == `Croatian`) {
+    data = localStorage.getItem('Croatian');
+  } else if (area == `Egyptian`) {
+    data = localStorage.getItem('Egyptian');
+  } else if (area == `Greek`) {
+    data = localStorage.getItem('Greek');
+  } else if (area == `Indian`) {
+    data = localStorage.getItem('Indian');
+  } else if (area == `Irish`) {
+    data = localStorage.getItem('Irish');
+  } else if (area == `Italian`) {
+    data = localStorage.getItem('Italian');
+  } else if (area == `Jamaican`) {
+    data = localStorage.getItem('Jamaican');
+  } else if (area == `Kenyan`) {
+    data = localStorage.getItem('Kenyan');
+  } else if (area == `Japanese`) {
+    data = localStorage.getItem('Japanese');
+  } else if (area == `Malaysian`) {
+    data = localStorage.getItem('Malaysian');
+  }else if (area == `Mexican`) {
+    data = localStorage.getItem('Mexican');
+  }else if (area == `Moroccan`) {
+    data = localStorage.getItem('Moroccan');
+  }else if (area == `Polish`) {
+    data = localStorage.getItem('Polish');
   }
   data = JSON.parse(data);
   console.log(data);
   single_mealEl.innerHTML = '';
-  resultHeading.innerHTML = `<h2><u>Search results for '${category}'</u></h2>`;
+  resultHeading.innerHTML = `<h2><u>Search results for '${area}'</u></h2>`;
   mealsEl.innerHTML = data
     .map(
       meal => `
