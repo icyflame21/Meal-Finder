@@ -26,7 +26,7 @@ function searchMeal(e) {
         resultHeading.innerHTML = `<h2><u>Search results for '${query}'</u></h2>`;
 
         if (data.meals === null) {
-          alert('There are no search results. Try again!');
+          errorMsg();
         } else {
           mealsEl.innerHTML = data.meals
             .map(
@@ -46,6 +46,27 @@ function searchMeal(e) {
     alert('Please enter a search term');
   }
 }
+
+function errorMsg() {
+  document.body.innerHTML = `<div id="container">
+<div class="content">
+  <h2>404</h2>
+  <h4>Oops! Page Not found</h4>
+  <p align="center">
+    The page you were looking for doesn't exist.
+  </p>
+  <a href="index.html">Back To Home</a>
+</div>
+</div>`;
+  var container = document.getElementById('container');
+  window.onmousemove = function (e) {
+    var x = -e.clientX / 5,
+      y = -e.clientY / 5;
+    container.style.backgroundPositionX = x + 'px';
+    container.style.backgroundPositionY = y + 'px';
+  };
+}
+
 
 submit.addEventListener('submit', searchMeal);
 
