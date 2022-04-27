@@ -7,7 +7,7 @@ async function updateSelect() {
   let select = document.querySelector('#area');
   let url =`https://www.themealdb.com/api/json/v1/1/list.php?a=list`;
   let data = await (await fetch(url)).json();
-  console.log(data.meals)
+  // console.log(data.meals)
   const categories=data.meals
   let option = document.createElement('option');
   option.setAttribute('value', ``);
@@ -43,7 +43,6 @@ async function storeData(data) {
 
 async function fetchData() {
   let area = document.querySelector('#area').value;
-  console.log(area);
   let data;
   if (area == `American`) {
     data = localStorage.getItem('American');
@@ -55,8 +54,12 @@ async function fetchData() {
     data = localStorage.getItem('Chinese');
   } else if (area == `Croatian`) {
     data = localStorage.getItem('Croatian');
-  } else if (area == `Egyptian`) {
+  }else if (area == `Dutch`) {
+    data = localStorage.getItem('Dutch');
+  }else if (area == `Egyptian`) {
     data = localStorage.getItem('Egyptian');
+  }else if (area == `French`) {
+    data = localStorage.getItem('French');
   } else if (area == `Greek`) {
     data = localStorage.getItem('Greek');
   } else if (area == `Indian`) {
@@ -81,7 +84,6 @@ async function fetchData() {
     data = localStorage.getItem('Polish');
   }
   data = JSON.parse(data);
-  console.log(data);
   single_mealEl.innerHTML = '';
   resultHeading.innerHTML = `<h2><u>Search results for '${area}'</u></h2>`;
   mealsEl.innerHTML = data
