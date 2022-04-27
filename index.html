@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGFkgwEBDUv/CSmC/wM3o/8FMZL/CDug/wU7m/8EKn//Axpg/wEROv8WGiz2g42sBwAAAAAAAAAAAAAAAFqj7f8/mev/U6Xx/22z9f9ts/b/V6Pv/z+X7f8fhOL/PI/l/yV92P8metL/QofW/y51yv8pZLv/AAAAAAAAAABVqPb/V6Lx/3229/92tPD/iMn7/3q98/9+uev/ZrLt/1aGwP8FL3P/LWWs/zVlov9nmcj/cJrO/5SaowMAAAAAKTt7/z9Vnv8iRpn/PEZ9/yMxdP8iNnb/ITZ4/yEmWv8PzP//Tdj//yo+gv8VLnr/Fyph/xEkXf8AAAAAKUWM6UBRoP85VKP/KT2E/y1Jl/9DYLL/ODt0/1pekv8Bv/z/MMj//xrG//8NH1b/R1aU/xY4jP8MInL/LEF/2QAAAAAVKU7/BhlV/y9Bhf8YLmP/Fx85/wkRKf8ET4z/CTZr/wwXOf8aJUj/FB1J/xodPf8CBhf/DGWi/255lyZZaJQ8NkmY/yIqfv8A2v//AnS9/0VTlP+Uo9r/U2eu/xIylf8mQ6T/T3TO/1Zwwv8iQJv/Ul+c/zlMiP9yd48BAAAAAGa/9/891v3/C7T4/wHL/v8Bxv//AN78/yjg/v8AdNP/P2x4/ww+Uf8JY4T/EyJG/wwOOv8TH1j/AAAAAAAAAABPisT/FCjO/zhV8P8fL/n/EyL3/wMM1v8RAGj/Exez/w4TmP8LD4P/EhmT/xQShP87Obb/DoGD/wAAAAAAAAAAGARZ/yIzXv8BCBD/AAAB/wiGgf8NADr/bzSY/wB0X/9AG2b/WyeC/1Ujd/9DPG//QzNa/wFPRP8AAAAAAAAAAAGRe/9mTXv/KBda/yIKZv8AQUD/A0sy/wBlS/8ARCz/AZqK/wCdg/8NsY3/AZ2M/wBqVf8mw7P/AIGB/wAAAABMvaL/AZaJ/wCOdv8BYFb/ACsq/wABAf8BcHH/A7ah/wABAf8BAQD/Aj47/wEDGP8Bh3L/x9juzQAAAAAAAAAAXbvx/6rd/f8GlY//AD19/wEVSv8ADQ3/AAYI/wAHC/8BNzj/AHNj/xA5XP88d6H/Laq4/53H8N4AAAAAAAAAAAAAAABnvP3/tNz9/6PX/f+Ey/7/c7/8/2+4+f98uPn/UqPx/zqP5/9gn+f/ZqPk/6DD8P8AAAAAAAAAAAAAAAAAAAAAnKfFT1Kp9/9Mrfv/Sqz6/z+j9v84nPP/NZbv/x2H6v8dfeH/Jn7h/y193/9pi8haAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAc5TWpkqI5f87hOb/NoHi/zt83/9Gf9v/T4DV/22LyVgAAAAAAAAAAAAAAAAAAAAA4AcAAIABAACAAQAAgAEAAAAAAACAAQAAgAEAAIABAACAAQAAgAEAAIAAAACAAQAAgAEAAMADAADgBwAA8B8AAA=="
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>MealFinder</title>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html"><h1>Purist Meal</h1></a>
+      <div class="flex">
+        <form class="flex" id="submit">
+          <input
+            type="text"
+            id="search"
+            spellcheck="false"
+            placeholder="Search for meals"
+          />
+          <button class="search-btn" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <button class="random-btn" id="random">Recipe of the Day</button>
+        <button class="random-btn" id="select">Select By Categories</button>
+        <button class="random-btn" id="area">Select By Area</button>
+      </div>
+      <main class="resultsList">
+        <div class="resultsList_items"></div>
+      </main>
+      <div id="result-heading"></div>
+      <div id="meals" class="meals"></div>
+      <div id="single-meal"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
