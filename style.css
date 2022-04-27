@@ -73,7 +73,7 @@ select {
   border-width: 0;
   margin: 0;
   outline: none;
-  transition: all 0.2s ease-in;
+  transition: all 0.1s ease-in;
   cursor: pointer;
 }
 
@@ -148,7 +148,7 @@ select {
   text-align: center;
   align-items: center;
   justify-content: center;
-  transition: all 0.1s ease-in;
+  transition: all 0.3s ease-in;
   opacity: 0;
 }
 
@@ -174,7 +174,7 @@ select {
   padding: 10px;
   border: 2px #2d2013 dashed;
   border-radius: 5px;
-  transition: all 0.1s ease-in;
+  transition: all 0.3s ease-in;
 }
 .single-meal-info:hover {
   background-color: #2d2013;
@@ -220,7 +220,7 @@ select {
   color: #2d2013;
   font-size: 12px;
   margin: 0 5px 5px 0;
-  transition: all 0.1s ease-in;
+  transition: all 0.3s ease-in;
 }
 .main a:hover {
   background-color: #2d2013;
@@ -228,8 +228,8 @@ select {
 }
 .resultsList {
   width: 390px;
-  top: 7.5rem;
-  left: 25.2rem;
+  top: 7.8rem;
+  left: 20.4rem;
   position: absolute;
   height: 300px;
   overflow-x: hidden;
