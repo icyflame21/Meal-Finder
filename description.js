@@ -1,11 +1,9 @@
 const single_mealEl = document.getElementById('single-meal');
 let val = JSON.parse(localStorage.getItem('val'));
-console.log(val);
 getData(val);
 async function getData(id) {
   let url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
   let data = await (await fetch(url)).json();
-  console.log(data.meals);
   addMealToDom(data.meals[0]);
 }
 function addMealToDom(meal) {
