@@ -1,10 +1,7 @@
 * {
   box-sizing: border-box;
 }
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+
 :root {
   --primary-color: #22254b;
   --secondary-color: #373b69;
