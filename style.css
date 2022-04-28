@@ -10,11 +10,6 @@
   --secondary-color: #373b69;
 }
 /* ===== Scrollbar CSS ===== */
-/* Firefox */
-* {
-  scrollbar-width: auto;
-  scrollbar-color: #373b69 #ffffff;
-}
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
