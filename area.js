@@ -82,6 +82,22 @@ async function fetchData() {
     data = localStorage.getItem('Moroccan');
   }else if (area == `Polish`) {
     data = localStorage.getItem('Polish');
+  }else if (area == `Portuguese`) {
+    data = localStorage.getItem('Portuguese');
+  }else if (area == `Russian`) {
+    data = localStorage.getItem('Russian');
+  }else if (area == `Spanish`) {
+    data = localStorage.getItem('Spanish');
+  }else if (area == `Thai`) {
+    data = localStorage.getItem('Thai');
+  }else if (area == `Tunisian`) {
+    data = localStorage.getItem('Tunisian');
+  }else if (area == `Turkish`) {
+    data = localStorage.getItem('Turkish');
+  }else if (area == `Unknown`) {
+    data = localStorage.getItem('Unknown');
+  }else if (area == `Vietnamese`) {
+    data = localStorage.getItem('Vietnamese');
   }
   data = JSON.parse(data);
   single_mealEl.innerHTML = '';
